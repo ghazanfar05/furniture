@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+.card {
+  width: 305px;
+  background-color: #262c40;
+  border-radius: 4px;
+
+  overflow: hidden;
+  box-shadow: 35px 20px 20px rgba(0, 2, 0, 0.2); /* Fixed shadow opacity */
+  margin: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation on hover */
+  animation: fadeIn 0.5s ease; /* Animation on load */
+}
+
+.card:hover {
+  transform: translateY(-5px); /* Lift effect */
+  box-shadow: 0px 20px 25px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.card-content {
+  padding: 8px;
+  height: 100px;
+}
+
+.card-content h3 {
+  font-size: 25px;
+  color: aliceblue;
+  margin-bottom: 7px;
+}
+
+.card-content p {
+  font-size: 9px;
+  color: aliceblue;
+  line-height: 1.2;
+}
+
+.ctn {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: rgb(0, 0, 0);
+  text-decoration: none;
+  border-radius: 18px;
+  margin-top: 16px;
+  color: rgb(167, 28, 28);
+  transition: background-color 0.3s ease; /* Animation on hover */
+}
+
+.ctn:hover {
+  background-color: rgba(0, 0, 0, 0.8); /* Darker background on hover */
+}
+
+/* Keyframes for fade-in effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px); /* Slide up on load */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+
+
+
+body {
+  @apply bg-gray-50 text-gray-900 antialiased;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Button styles */
+button {
+  @apply py-2 px-4 font-semibold text-white bg-blue-600 rounded-lg;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  @apply bg-blue-700;
+}
+
+/* Custom select styles */
+.select-trigger {
+  @apply flex items-center justify-between py-2 px-4 border rounded-lg bg-gray-100;
+}
+
+.select-content {
+  @apply bg-white rounded-lg shadow-lg;
+}
+
+.select-item {
+  @apply py-2 px-4 hover:bg-gray-100 cursor-pointer;
+}
+
+/* Slider styles */
+.slider {
+  @apply appearance-none w-full h-2 bg-gray-200 rounded-lg;
+}
+
+.slider::-webkit-slider-thumb {
+  @apply appearance-none w-4 h-4 bg-blue-600 rounded-full cursor-pointer;
+}
+
+/* Switch styles */
+.switch {
+  @apply relative inline-flex items-center h-6 rounded-full w-11 bg-gray-200;
+}
+
+.switch input:checked + span {
+  @apply bg-blue-600;
+}
+
+/* Label styles */
+label {
+  @apply text-sm font-medium text-gray-700;
+}
